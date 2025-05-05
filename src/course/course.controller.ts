@@ -17,8 +17,6 @@ export class CourseController {
 
   @Post()
   create(@Body() createCourseDto: any) {
-    console.log(createCourseDto);
-
     return this.courseService.create(createCourseDto);
   }
 
@@ -28,7 +26,7 @@ export class CourseController {
   }
 
   @Get(':id')
-  findOne(@Param('id') id: string) {
+  findOne(@Param('id') id: number) {
     return this.courseService.findOne(id);
   }
 

@@ -1,5 +1,5 @@
 export interface courseInterface {
-  id: string;
+  id: number;
   teacherName: string;
   description: string;
   isActive: boolean;

@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { CourseModule } from './course/course.module';
+import { BookModule } from './book/book.module';
 @Module({
   imports: [
     ConfigModule.forRoot({ isGlobal: true, envFilePath: '.env' }),
@@ -14,6 +15,7 @@ import { CourseModule } from './course/course.module';
     //   username: 'postgres',
     // }),
     CourseModule,
+    BookModule,
   ],
   controllers: [AppController],
   providers: [AppService],
