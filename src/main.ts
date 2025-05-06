@@ -8,7 +8,7 @@ async function bootstrap() {
   app.setGlobalPrefix('api');
 
   app.useGlobalPipes(new ValidationPipe({ whitelist: true }));
-  const builder = await new DocumentBuilder().setTitle('Api').build();
+  const builder = await new DocumentBuilder().setTitle('courlar api').build();
   const factory = SwaggerModule.createDocument(app, builder);
   SwaggerModule.setup('docs', app, factory);
   await app.listen(process.env.PORT ?? 3000);
